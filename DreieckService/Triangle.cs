@@ -17,7 +17,7 @@ namespace DreieckService
         {
             // Check for invalid triangles
             if (Sides.Any(side => (side <= 0 ) || (Sides[2] >= (Sides[1] + Sides[0]))))
-                return "not a valid triangle";
+                return "an invalid triangle";
 
             // Check for equilateral triangle
             if ((Sides[0] == Sides[1]) && (Sides[1] == Sides[2]))

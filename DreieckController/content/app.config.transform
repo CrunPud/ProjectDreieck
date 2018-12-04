@@ -1,5 +1,6 @@
 <configuration>
   <appSettings>
-    <add key="DreieckHostUrl" value="Set This To The Host Url Of Your Dreieck Service" />
+    <add key="DreieckHostUrl" value="Set this to the Url of the Dreieck service" />
+    <add key="DreieckServiceCode" value="Set this to the service code" />
   </appSettings>
 </configuration>

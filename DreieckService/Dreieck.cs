@@ -12,7 +12,7 @@ namespace DreieckService
     public static class Dreieck
     {
         [FunctionName("Dreieck")]
-        public static async Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)]HttpRequestMessage req, TraceWriter log)
+        public static HttpResponseMessage Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)]HttpRequestMessage req, TraceWriter log)
         {
             log.Info("C# HTTP trigger function processed a request.");
 
@@ -33,7 +33,7 @@ namespace DreieckService
                     .FirstOrDefault(val => val.Key.Equals("sidec"))
                     .Value);
             }
-            catch (Exception ex)
+            catch ( Exception )
             {
                 return req.CreateResponse(HttpStatusCode.BadRequest, $"An error occurred while trying to process your triangle with sides [{sideA}, {sideB}, {sideC}]");
             }

@@ -33,9 +33,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.sideABox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.Message = new System.Windows.Forms.Label();
+            this.sideBBox = new System.Windows.Forms.TextBox();
+            this.sideCBox = new System.Windows.Forms.TextBox();
+            this.description = new System.Windows.Forms.Label();
+            this.updateDescriptionBackgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // label1
@@ -71,39 +72,44 @@
             this.sideABox.Name = "sideABox";
             this.sideABox.Size = new System.Drawing.Size(100, 20);
             this.sideABox.TabIndex = 6;
-            this.sideABox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.acceptOnlyNumbers);
+            this.sideABox.TextChanged += new System.EventHandler(this.OnTextChanged);
+            this.sideABox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AcceptOnlyNumbers);
             // 
-            // textBox1
+            // sideBBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(98, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 7;
+            this.sideBBox.Location = new System.Drawing.Point(98, 52);
+            this.sideBBox.Name = "sideBBox";
+            this.sideBBox.Size = new System.Drawing.Size(100, 20);
+            this.sideBBox.TabIndex = 7;
+            this.sideBBox.TextChanged += new System.EventHandler(this.OnTextChanged);
+            this.sideBBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AcceptOnlyNumbers);
             // 
-            // textBox2
+            // sideCBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(98, 83);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 8;
+            this.sideCBox.Location = new System.Drawing.Point(98, 83);
+            this.sideCBox.Name = "sideCBox";
+            this.sideCBox.Size = new System.Drawing.Size(100, 20);
+            this.sideCBox.TabIndex = 8;
+            this.sideCBox.TextChanged += new System.EventHandler(this.OnTextChanged);
+            this.sideCBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AcceptOnlyNumbers);
             // 
-            // Message
+            // description
             // 
-            this.Message.AutoSize = true;
-            this.Message.Location = new System.Drawing.Point(23, 139);
-            this.Message.Name = "Message";
-            this.Message.Size = new System.Drawing.Size(230, 13);
-            this.Message.TabIndex = 9;
-            this.Message.Text = "Please submit lengths for the sides of a triangle.";
+            this.description.AutoSize = true;
+            this.description.Location = new System.Drawing.Point(23, 139);
+            this.description.Name = "description";
+            this.description.Size = new System.Drawing.Size(230, 13);
+            this.description.TabIndex = 9;
+            this.description.Text = "Please submit lengths for the sides of a triangle.";
             // 
             // Triangulator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(462, 288);
-            this.Controls.Add(this.Message);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.description);
+            this.Controls.Add(this.sideCBox);
+            this.Controls.Add(this.sideBBox);
             this.Controls.Add(this.sideABox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -122,9 +128,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox sideABox;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label Message;
+        private System.Windows.Forms.TextBox sideBBox;
+        private System.Windows.Forms.TextBox sideCBox;
+        private System.Windows.Forms.Label description;
     }
 }
 

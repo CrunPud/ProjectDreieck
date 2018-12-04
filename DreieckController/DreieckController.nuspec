@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>CrunPud.Dreieck.Controller</id>
+    <version>1.0.0</version>
+    <title>DreieckController</title>
+    <authors>Ian Goodman</authors>
+    <owners>Ian Goodman</owners>
+    <projectUrl>https://github.com/CrunPud/ProjectDreieck</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This controller is used to get info on triangles from the Dreieck service</description>
+    <releaseNotes>Initial release of the controller</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>Dreieck</tags>
+  </metadata>
+</package>
