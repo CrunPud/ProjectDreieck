@@ -13,6 +13,10 @@ namespace DreieckService
             Array.Sort(Sides);
         }
 
+        /// <summary>
+        /// Gets a description of this triangle
+        /// </summary>
+        /// <returns></returns>
         public string GetDescription()
         {
             // Check for invalid triangles

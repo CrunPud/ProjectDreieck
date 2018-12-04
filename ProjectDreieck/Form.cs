@@ -23,6 +23,11 @@ namespace ProjectDreieck
                 new RunWorkerCompletedEventHandler(UpdateDescriptionBackgroundWorker_RunWorkerComplete);
         }
 
+        /// <summary>
+        /// Limits input in text fields to positive doubles
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AcceptOnlyNumbers(object sender, KeyPressEventArgs e)
         {
             int keyVal = e.KeyChar;
@@ -34,24 +39,31 @@ namespace ProjectDreieck
             }
         }
 
-        private string GetTriangleDescription(int[] sides)
-        {
-            Client dreieckController = new Client();
-
-            return dreieckController.GetTriangleDescription(sides);
-        }
-
+        /// <summary>
+        /// Gets the triangle side lengths from the args then gets the description of the triangle
+        /// from the dreieck service, then saves the description to the results
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void UpdateDescriptionBackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
             int[] sides = (int[])e.Argument;
 
-            e.Result = GetTriangleDescription(sides);
+            Client dreieckController = new Client();
+
+            e.Result = dreieckController.GetTriangleDescription(sides);
         }
 
+        /// <summary>
+        /// Pulls the description of the triangle from the results, then posts the results to the form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void UpdateDescriptionBackgroundWorker_RunWorkerComplete(object sender, RunWorkerCompletedEventArgs e)
         {
             description.Text = "These side lengths produce " + (string)e.Result;
         }
+
 
         private void OnTextChanged(object sender, System.EventArgs e)
         {
