@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectDreieck", "ProjectDreieck\ProjectDreieck.csproj", "{0EA288A5-7976-42C1-8F20-10F015E9F043}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DreieckController", "DreieckController\DreieckController.csproj", "{9FE74214-5216-4FC3-B4C6-B5E4E154DCCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DreieckService", "DreieckService\DreieckService.csproj", "{BA20D959-3F54-409E-9BA0-8E68126AF585}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0EA288A5-7976-42C1-8F20-10F015E9F043}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EA288A5-7976-42C1-8F20-10F015E9F043}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EA288A5-7976-42C1-8F20-10F015E9F043}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EA288A5-7976-42C1-8F20-10F015E9F043}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FE74214-5216-4FC3-B4C6-B5E4E154DCCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FE74214-5216-4FC3-B4C6-B5E4E154DCCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FE74214-5216-4FC3-B4C6-B5E4E154DCCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FE74214-5216-4FC3-B4C6-B5E4E154DCCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA20D959-3F54-409E-9BA0-8E68126AF585}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA20D959-3F54-409E-9BA0-8E68126AF585}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA20D959-3F54-409E-9BA0-8E68126AF585}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA20D959-3F54-409E-9BA0-8E68126AF585}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C3E9D3A-1B08-4BFF-A8D1-CD77E01C797F}
+	EndGlobalSection
+EndGlobal
